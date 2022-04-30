@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/css/ol.css"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
+
+    <title>Öö pikkuse rakendus</title>
+  </head>
+  <body>
+    <h1 id="pealkiri">Öö pikkuse arvutamise rakendus</h1>
+    <div id="kirjeldus">
+      Veebirakendus, milles saab määrata asukoha ja kuupäeva ning selle info
+      alusel arvutada öö pikkuse selles asukohas. Kasutaja saab asukohta määrata
+      sisestades koordinaate käsitsi või valides asukoha kaardil :)
+    </div>
+
+    <br />
+    
+    <div class="andmed">
+
+      <div id="map"></div>
+      <div class="sisendid">
+        <div class="sisend" id="kuupäeva_sisend">
+        <p> Sisesta õhtu kuupäev:</p>
+        <input type="date" id="kuupäev" />
+      </div>
+      <br />
+      <div class="sisend" id="pikkuse_sisend">
+        <p>Sisesta pikkuskraad:</p>
+        
+        <input type="text" id="pikkus" />
+      </div>
+      <br />
+      <div class="sisend" id="laiuse_sisend">
+        <p>Sisesta laiuskraad:</p>
+        
+        <input type="text" id="laius" />
+      </div>
+      <div class="nupp">     
+         <button id="arvuta">Arvuta!</button>
+</div>
+    </div>    
+    </div>
+
+    <br />
+    <div>
+      <p id="vastus"></p>
+    <script type="module" src="js/app.js"></script>
+    <script src="js/suncalculator.js"></script>
+  </body>
+</html>
